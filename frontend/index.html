@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reacepals</title>
-</head>
-<body>
-  <div id="app">
-    <!-- Auth listener fylder dette -->
-  </div>
-  <script type="module" src="/src/main.ts"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racepals - Connect. Prepare. Race.</title>
+  </head>
+  <body>
+    <app-header></app-header>
+    
+    <main class="container">
+      <!-- For now, show signup form -->
+      <signup-form></signup-form>
+      
+      <!-- Uncomment to show login instead -->
+      <!-- <login-form></login-form> -->
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
