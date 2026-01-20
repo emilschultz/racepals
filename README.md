@@ -1,2 +1,3 @@
 # racepals
-Connect. Prepare. Race.  The basecamp for ski race crews.
+_Connect. Prepare. Race._
+The basecamp for ski race crews.
