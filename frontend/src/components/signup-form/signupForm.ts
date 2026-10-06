@@ -3,7 +3,7 @@ import { signup } from '../../services/auth-service';
 class SignupForm extends HTMLElement {
   connectedCallback() {
     this.render();
-    this.attachEventListeners();
+    this.addEventListeners();
   }
 
   render() {
@@ -28,11 +28,12 @@ class SignupForm extends HTMLElement {
 
         <button type="submit">Sign Up</button>
         <p class="error" id="error"></p>
+        <p>Already have an account? <a href="/login">Login</a></p>
       </form>
     `;
   }
 
-  attachEventListeners() {
+  addEventListeners() {
     const form = this.querySelector('#signup-form') as HTMLFormElement;
     const errorEl = this.querySelector('#error') as HTMLParagraphElement;
 

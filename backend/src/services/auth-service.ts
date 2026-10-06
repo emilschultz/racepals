@@ -11,11 +11,14 @@ export async function createUser(email: string, password: string, displayName: s
 
   // Create user document in Firestore
   const user: User = {
-    id: userRecord.uid,
-    email,
+    uid: userRecord.uid,
     displayName,
-    createdAt: new Date(),
-    groups: [],
+    email,
+    phone: userRecord.phoneNumber || '',
+    photoUrl: userRecord.photoURL || '',
+    createdAt: new Date().toString(),
+    groupIds: [],
+    isMinor: false, // Default value; can be updated later based on application logic
   };
 
   await db.collection('users').doc(userRecord.uid).set(user);

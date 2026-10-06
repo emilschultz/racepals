@@ -1,5 +1,6 @@
 import { db } from '../config/firebase.js';
 import { Group } from '../types/index.js';
+import admin from 'firebase-admin';
 
 function generateInviteCode(): string {
   return Math.random().toString(36).substring(2, 10).toUpperCase();

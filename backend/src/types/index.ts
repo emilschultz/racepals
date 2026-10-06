@@ -1,9 +1,12 @@
 export interface User {
-  id: string;
-  email: string;
+  uid: string; // matcher Firebase Auth uid
   displayName: string;
-  createdAt: Date;
-  groups: string[];
+  email: string;
+  phone?: string;
+  photoUrl?: string;
+  createdAt: string;
+  groupIds: string[]; // denormaliseret liste — hurtigt overblik uden collection-group query
+  isMinor?: boolean; //  // relevant ved institutionelle konti (skoler) — GDPR
 }
 
 export interface Group {
