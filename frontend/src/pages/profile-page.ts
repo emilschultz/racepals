@@ -1,6 +1,7 @@
 // frontend/src/pages/profile-page.ts
 import { getCurrentUser } from '../services/user-service';
 import { logout } from '../services/auth-service';
+import './profile-page.css';
 
 class ProfilePage extends HTMLElement {
   connectedCallback() {
@@ -35,9 +36,12 @@ class ProfilePage extends HTMLElement {
     }
   }
 
-  render(user: { displayName: string; email: string; groupIds: string[] }) {
+  render(user: { displayName: string; email: string; groupIds: string[], photoUrl?: string }) {
+  
     this.innerHTML = `
       <div class="profile-page">
+        <img src="${user.photoUrl || 'https://via.placeholder.com/150'}" alt="Profile Picture" class="profile-picture-container">
+        <div class="profile-info">
         <h2>${user.displayName || 'Din profil'}</h2>
         <p>${user.email}</p>
         <p>Du er med i ${user.groupIds?.length ?? 0} ${user.groupIds?.length === 1 ? 'gruppe' : 'grupper'}.</p>
