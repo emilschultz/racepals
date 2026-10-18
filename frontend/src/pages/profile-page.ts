@@ -44,6 +44,8 @@ class ProfilePage extends HTMLElement {
         <h2>${user.displayName || 'Din profil'}</h2>
         <p>${user.email}</p>
         <p>Du er med i ${user.groupIds?.length ?? 0} ${user.groupIds?.length === 1 ? 'gruppe' : 'grupper'}.</p>
+        <p> Mine grupper: ${user.groupIds?.length > 0 ? user.groupIds.join(', ') : 'Ingen grupper endnu.'}</p>
+        <button class="create-group-button">Opret gruppe</button>
         <button class="logout-button">Log ud</button>
       </div>
     `;
