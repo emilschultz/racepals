@@ -1,4 +1,3 @@
-// frontend/src/pages/profile-page.ts
 import { getCurrentUser } from '../services/user-service';
 import { logout } from '../services/auth-service';
 import './profile-page.css';
