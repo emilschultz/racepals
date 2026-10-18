@@ -12,7 +12,7 @@ class AuthPage extends HTMLElement {
     
     this.innerHTML = `
       <div class="auth-page">
-        <form class="auth-form" id="auth-form">
+        <form class="auth-form-ish" id="auth-form">
           <h2>${isLogin ? 'Login' : 'Sign Up'}</h2>
           
           ${!isLogin ? `

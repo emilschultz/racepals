@@ -1,7 +1,6 @@
 import './styles/global.css';
 import './components/header/header';
-import './components/login-form/loginForm';
-import './components/signup-form/signupForm';
+import './pages/auth-page';
 import { auth } from './config/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 

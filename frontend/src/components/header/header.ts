@@ -8,7 +8,7 @@ class AppHeader extends HTMLElement {
     this.innerHTML = `
       <header class="header">
         <div class="container">
-          <h1>Racepals</h1>
+          <h1>Flowplan</h1>
           <nav>
             <!-- Navigation will go here -->
           </nav>
