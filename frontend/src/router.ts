@@ -56,7 +56,7 @@ export default class Router {
     }
 
     // 404 fallback
-    this.render('<h1>404 - Page not found</h1>');
+    this.render('<h1>404 - Page not found</h1>'); // make this a component / element / page
   }
 
   render(html: string) {
